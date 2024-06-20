@@ -1,0 +1,109 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+:root{
+    --primary-color: #1769aa;
+    --secondary-color: #5c6bc0;
+    --white-color:  #F8F8FF;
+    --gray-color: #878484;
+    --red-color: #ff0000;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white-color);
+}
+.form{
+    height: 30rem;
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 2px 8px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.1);
+}
+
+.inputContainer{
+    width: 80%;
+    display: flex;
+    gap: 0.5rem;
+    border-bottom: 2px solid var(--gray-color);
+}
+input,
+button{
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    background-color: transparent ;
+    width: 85%;
+}
+input[name='email'],
+input[name='name']{
+    background-color: transparent !important;
+    box-shadow: 0 0 0px 1000px var(--white-color) inset;
+}
+.countryBox{
+    display: flex;
+    gap: 0.5em;
+
+}
+
+#country-code{
+    border: none;
+}
+.loginButton{
+    width: 90%;
+    background-color: var(--primary-color);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    color: var(--white-color);
+    cursor: pointer;
+}
+h1{
+    color: var(--primary-color);
+}
+.loginButton:hover{
+    background-color: var(--secondary-color);
+}
+.rating{
+    transform: scale(1.2);
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+
+.submitted-massage{
+    height: 15vh;
+    padding: 3em 3em 4em 3em;
+    color: var(--secondary-color);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 2px 8px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 450px){
+    .form{
+        width: 18rem;
+        height: 25rem;
+     }
+    .rating{
+        gap: 0.5em;
+    }
+    #countrySelect{
+        width: 5.5rem;
+    
+    }
+    .submitted-massage{
+        width: 60%;
+        padding: 15px;
+        
+    }
+    
+}
